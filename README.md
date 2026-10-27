@@ -13,11 +13,15 @@ python -m http.server 8080
 
 ## What is here
 
-- `index.html` — the whole app: header, conversation log, composer, and a collapsible
-  "Connection settings" panel (API base URL + key, kept in `localStorage`).
-- The **only** place that changes when the platform is wired up is `ask(text)` in the script
-  block, marked `TODO(integration)`. Everything above it is the demo page; everything below it
-  is page wiring.
+| File | What it holds |
+| --- | --- |
+| `index.html` | Markup only: header, conversation log, composer, collapsible "Connection settings" panel |
+| `styles.css` | All styling, one file, no build step |
+| `app.js` | Page wiring plus the single integration hook |
+
+The **only** place that changes when the platform is wired up is `ask(text)` in `app.js`,
+marked `TODO(integration)`. Everything above it in that file is the demo page; everything below
+it is page wiring.
 
 Until the platform publishes its chat contract, sending a message shows a notice that the
 integration is not wired yet — the page never pretends to work.
