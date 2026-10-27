@@ -4,12 +4,6 @@ A deliberately dumb one-page app with a single chat box, built to measure **how 
 takes to plug a third-party page into our assistant platform**. The page has no features on
 purpose: everything that is not the integration would distort the measurement.
 
-One file, no build step, no dependencies. Open `index.html` in a browser, or serve the folder:
-
-```bash
-python -m http.server 8080
-# http://localhost:8080
-```
 
 ## What is here
 
